@@ -1,27 +1,18 @@
-# NGINX Example
+# Static Hosting from Railway Volumes
 
-This example is deploys a site using [NGINX](https://www.nginx.com/)
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/o3MbZe)
-
-
-## ✨ Features
-
-- NGINX
-- Static Site
+Hey, mit diesem Template könnt ihr eine beliebig große Seite statisch in Railway hosten.
 
 ## 💁‍♀️ How to use
+Hierfür ein Volume anlegen, und es mit diesem einfachen Filebrowser befüllen:
+https://github.com/brody192/filebrowser-template/pkgs/container/filebrowser-template (Den gibt es in Railway auch als fertiges Template - Einfach nach "filebrowser" suchen...)
 
-- Open the `site/index.html` in the browser
+Über den Filebrowser zieht ihr dann eure Daten in das Volume.
+Wichtig: Es muss eine index.hmtl vorhanden sein.
 
-## 📝 Notes
+Dann das Volume in dieses Projekt mit dem Pfad "/data" mounten.
+In den Settings unter Port 443 öffentlich zugänglich machen.
 
-By default the `site/` directory gets deployed as a static site. This can be modified by changing the `Dockerfile`.
+Zack fertich - Statische große webseite!!
 
-The site is deployed using the default NGINX configuration. This can be overridden with a custom conf file by adding
-
-```
-COPY nginx.conf /etc/nginx/nginx.conf
-```
-
-to the end of the Dockerfile. For more information, [read the docs](https://hub.docker.com/_/nginx).
+Bei Fragen gerne auf mich zukommen :)
+LC
